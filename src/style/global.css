@@ -4,86 +4,61 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'JetBrains Mono', monospace;
 }
 
 :root {
   --brand: #9755ed;
+  --answerChoose: hsl(90, 59%, 27%);
 }
-.quiz {
-  max-width: 700px;
+
+.heading {
+  line-height: 1.35;
+  margin-bottom: 10rem;
+}
+.color-brand {
+  color: var(--brand);
+}
+
+.btn-brand {
+  background: var(--brand) !important;
+}
+#btnRulesQuiz,
+#btnStartQuiz {
+  transition: all 280ms ease-in-out;
+}
+#btnRulesQuiz:active,
+#btnStartQuiz:active {
+  transform: scale(0.95);
+}
+.container {
+  max-width: 700px !important;
   width: 100%;
-  margin: auto;
-  h3 span {
-    color: var(--brand);
-  }
-
-  .timing-countdown {
-    background: var(--brand);
-    transform: translate(50%);
-  }
-
-  .showQuestion {
-    background: var(--brand);
-  }
-  .quiz-header {
-    padding-top: 8rem;
-  }
-
-  .no-question {
-    color: var(--brand);
-  }
-  .categoryQuiz {
-    position: absolute;
-    right: 50%;
-    top: 10%;
-    transform: translate(30%) rotate(90deg);
-    padding-block: 1rem;
-    padding-inline: 1.5rem;
-  }
-
-  .quizAnswer p {
-    cursor: pointer;
-    transition: all 280ms ease-in-out;
-
-    &.active {
-      background: var(--brand);
-      color: #fff;
-    }
-  }
-
-  .quizBtn {
-    button {
-      transition: all 280ms ease-in-out !important;
-    }
-    .prevButton:active {
-      transform: translateX(-10px);
-    }
-    .nextButton {
-      background: var(--brand);
-      border: transparent;
-      border-radius: 5px;
-
-      &:hover {
-        opacity: 0.8;
-      }
-
-      &:active {
-        transform: translateX(10px);
-      }
-    }
-  }
 }
 
-@media (max-width: 576px) {
-  .quiz-content {
-    margin-block: 3rem;
+.content-loader {
+  width: 0%;
+  height: 5px;
+  border-radius: 8px;
+  transition: all 280ms ease-in-out;
+  background: #9755ed;
+}
 
-    .quizAnswer {
-      padding-inline: 1rem !important;
-      gap: 0.4rem !important;
-    }
-    .quizBtn {
-      padding-inline: 1rem !important;
-    }
-  }
+.chooseAnswer {
+  border: 1px solid rgb(223, 219, 219);
+  border-radius: 3px;
+  cursor: pointer;
+  padding: 0.6rem 1rem;
+  margin-top: 1rem;
+}
+
+.btnNext {
+  color: #5818ab !important;
+  font-weight: bold !important;
+  transition: all 280ms ease-in-out !important;
+  border: transparent !important;
+}
+
+.btnNext:active {
+  transform: translateX(10px);
 }
