@@ -62,3 +62,13 @@ html {
 .btnNext:active {
   transform: translateX(10px);
 }
+
+.true {
+  background: #185519;
+  color: #f5f7f8;
+}
+
+.false {
+  background: #c7253e;
+  color: #f5f7f8;
+}

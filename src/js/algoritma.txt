@@ -1,0 +1,42 @@
+Aturan Dalam Game Kuis Sederhana
+
+1. User di berikan Waktu Pengerjaan Selama 10 Detik 
+2. User di berikan Total Soal Sebanyak 10
+3. Ketika Berhasil Menebak Jawaban dari Kuis tersebut akan menerima Point sebanyak 10
+4. Ketika Tidak Berhasil Menebak Jawaban dari Kuis Point nya tidak akan bertambah
+5. Ketika Belum Memilih Jawaban , maka Button Next tidak dapat di Klik
+
+
+
+
+
+Alur Kerja Game Kuis Sederhana
+
+1. Ketika Sedang Dalam Root ==> index.html <== Kita Diberikan 2 Pilihan Button ['Aturan Kuis' , 'Mulai Kuis']
+
+2. Lalu Ketika Kita Menekan | Klik Button Aturan Kuis , Kita akan berpindah ke Root yang berbeda ==> rules.html <== 
+
+
+3. Dan Ketika kita Menekan | Klik Button Mulai Kuis
+
+Alur Ketika Dalam Mode Mulai Kuis
+
+1. Browser akan Meload Soal Soal dan Waktu Pengerjaan Otomatis Berjalan 
+2. Total Soal akan di Kalkulasikan (Di Kurangi) dengan Total Semua Soal dan Soal Pertama 
+3. Ketika Sedang Memilih Opsi Jawaban , User di berikan 1 Kesempatan Saja Dalam Memilih Opsi Jawaban Tersebut.
+4. Ketika Ingin Menekan Button ==> Next <== User di Haruskan Untuk Memilih Opsi Jawaban Terlebih Dahulu
+    dan Jika User belum memilih dan Waktu Pengerjaan Habis , Maka Soal Akan Otomatis Terganti
+
+5. Ketika Belum Memilih Opsi JAWABAN User tidak dapat menekan button Next 
+6. Ketika User Berhasil Memilih Jawaban Yang Benar Maka Background dalam Opsi Pilihan Tersebut akan berwarna Hijau, dan Jika User Tidak Berhasil Memilih Jawaban Yang Benar maka Background dalam Opsi Pilihan Tersebut akan berwarna Merah.
+
+7. Lalu Jika Jawaban Benar , maka akan mendapatkan 10 Point
+8. Ketika Menekan Button Next.
+    1 Waktu Pengerjaan Akan berubah menjadi waktu semula 
+    2 Total Soal akan Melakukan Kalkulasi dengan (id SOAL yang sekarang dengan jumlah semua soalnya)
+
+9. Ketika Total Soal Sudah Habis ,dan Waktu Sudah Habis
+     Maka Total Soal akan berubah menjadi ==> Kuis Berakhir😊
+     Maka User Di Beritahu Hasil dari Nilai Mereka dan Setelah itu akan menampilkan PopUp Confirm yang memiliki Dua Pilihan 1. Close , dan 2. Main Lagi.  
+
+     

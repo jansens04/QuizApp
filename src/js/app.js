@@ -4,76 +4,75 @@ const bankSoal = [
     pertanyaan: 'Apa output dari kode berikut?\n\nconsole.log(typeof null);',
     pilihan: ["A. 'object'", "B. 'null'", "C. 'undefined'", "D. 'boolean'"],
   },
-  {
-    id: 2,
-    pertanyaan: 'Manakah di antara berikut ini yang BUKAN tipe data primitif dalam JavaScript?',
-    pilihan: ['A. String', 'B. Number', 'C. Boolean', 'D. Array'],
-  },
-  {
-    id: 3,
-    pertanyaan: "Apa fungsi utama dari metode 'map()' pada array di JavaScript?",
-    pilihan: ['A. Mengubah elemen array menjadi objek', 'B. Mengurutkan elemen array', 'C. Membuat array baru dengan hasil pemanggilan fungsi pada setiap elemen array', 'D. Menambahkan elemen baru ke akhir array'],
-  },
-  {
-    id: 4,
-    pertanyaan: "Di manakah posisi keyword 'default' digunakan dalam switch statement?",
-    pilihan: ['A. Setelah semua case statements', 'B. Sebelum case pertama', 'C. Di mana saja dalam switch statement', 'D. Hanya jika tidak ada case yang cocok'],
-  },
-  {
-    id: 5,
-    pertanyaan: "Apa hasil dari operasi 2 + '3' di JavaScript?",
-    pilihan: ['A. 5', "B. '5'", 'C. 23', "D. '23'"],
-  },
-  {
-    id: 6,
-    pertanyaan: "Apa output dari kode berikut?\n\nconsole.log(1 === '1');",
-    pilihan: ['A. true', 'B. false', 'C. undefined', 'D. Error'],
-  },
-  {
-    id: 7,
-    pertanyaan: 'Apa yang dimaksud dengan closure dalam JavaScript?',
-    pilihan: [
-      'A. Fungsi yang dipanggil segera setelah didefinisikan',
-      'B. Fungsi yang memiliki akses ke variabel dari scope luar meskipun setelah fungsi luar telah dieksekusi',
-      'C. Fungsi yang tidak memiliki parameter',
-      'D. Fungsi yang didefinisikan di dalam objek',
-    ],
-  },
-  {
-    id: 8,
-    pertanyaan: 'Bagaimana cara mendeklarasikan variabel di JavaScript yang tidak dapat diubah nilainya setelah deklarasi?',
-    pilihan: ['A. var', 'B. let', 'C. const', 'D. static'],
-  },
-  {
-    id: 9,
-    pertanyaan: 'Manakah di antara berikut ini yang digunakan untuk melakukan iterasi melalui properti sebuah objek?',
-    pilihan: ['A. for loop', 'B. forEach', 'C. for...in', 'D. map'],
-  },
-  {
-    id: 10,
-    pertanyaan: 'Apa output dari kode berikut?\n\nconsole.log(!!false);',
-    pilihan: ['A. true', 'B. false', 'C. null', 'D. undefined'],
-  },
+  // {
+  //   id: 2,
+  //   pertanyaan: 'Manakah di antara berikut ini yang BUKAN tipe data primitif dalam JavaScript?',
+  //   pilihan: ['A. String', 'B. Number', 'C. Boolean', 'D. Array'],
+  // },
+  // {
+  //   id: 3,
+  //   pertanyaan: "Apa fungsi utama dari metode 'map()' pada array di JavaScript?",
+  //   pilihan: ['A. Mengubah elemen array menjadi objek', 'B. Mengurutkan elemen array', 'C. Membuat array baru dengan hasil pemanggilan fungsi pada setiap elemen array', 'D. Menambahkan elemen baru ke akhir array'],
+  // },
+  // {
+  //   id: 4,
+  //   pertanyaan: "Di manakah posisi keyword 'default' digunakan dalam switch statement?",
+  //   pilihan: ['A. Setelah semua case statements', 'B. Sebelum case pertama', 'C. Di mana saja dalam switch statement', 'D. Hanya jika tidak ada case yang cocok'],
+  // },
+  // {
+  //   id: 5,
+  //   pertanyaan: "Apa hasil dari operasi 2 + '3' di JavaScript?",
+  //   pilihan: ['A. 5', "B. '5'", 'C. 23', "D. '23'"],
+  // },
+  // {
+  //   id: 6,
+  //   pertanyaan: "Apa output dari kode berikut?\n\nconsole.log(1 === '1');",
+  //   pilihan: ['A. true', 'B. false', 'C. undefined', 'D. Error'],
+  // },
+  // {
+  //   id: 7,
+  //   pertanyaan: 'Apa yang dimaksud dengan closure dalam JavaScript?',
+  //   pilihan: [
+  //     'A. Fungsi yang dipanggil segera setelah didefinisikan',
+  //     'B. Fungsi yang memiliki akses ke variabel dari scope luar meskipun setelah fungsi luar telah dieksekusi',
+  //     'C. Fungsi yang tidak memiliki parameter',
+  //     'D. Fungsi yang didefinisikan di dalam objek',
+  //   ],
+  // },
+  // {
+  //   id: 8,
+  //   pertanyaan: 'Bagaimana cara mendeklarasikan variabel di JavaScript yang tidak dapat diubah nilainya setelah deklarasi?',
+  //   pilihan: ['A. var', 'B. let', 'C. const', 'D. static'],
+  // },
+  // {
+  //   id: 9,
+  //   pertanyaan: 'Manakah di antara berikut ini yang digunakan untuk melakukan iterasi melalui properti sebuah objek?',
+  //   pilihan: ['A. for loop', 'B. forEach', 'C. for...in', 'D. map'],
+  // },
+  // {
+  //   id: 10,
+  //   pertanyaan: 'Apa output dari kode berikut?\n\nconsole.log(!!false);',
+  //   pilihan: ['A. true', 'B. false', 'C. null', 'D. undefined'],
+  // },
 ];
-
-const answersQuestion = [0, 3, 2, 0, 3, 1, 1, 2, 2, 1];
 
 const timingQuiz = document.querySelector('.timingQuiz');
 const contentLoader = document.querySelector('.content-loader');
 const contentQuiz = document.querySelector('#contentQuiz');
 const amountQuestion = document.querySelector('.amountQuestion');
 
+const answerResult = [0, 3, 2, 0, 3, 1, 1, 2, 2, 1];
+
 const maxQuestion = bankSoal.length;
 let timingProcessing = 10;
 let initValue = 0;
 
-const setLoadBrowser = () => {
-  setUI(bankSoal[initValue]);
-};
-
 const setUI = (datasQuestion) => {
   const { id, pertanyaan: question, pilihan: chooseAnswer } = datasQuestion;
   const [answer_a, answer_b, answer_c, answer_d] = chooseAnswer;
+
+  amountQuestion.innerHTML = maxQuestion - 1;
+  timingQuiz.innerHTML = timingProcessing;
 
   contentQuiz.innerHTML = `
     <div class="d-flex gap-3 align-items-center mt-5 pt-5">
@@ -102,35 +101,62 @@ const setUI = (datasQuestion) => {
                     </svg></button>
             </div>
   `;
-};
-
-const nextQuestion = () => {
-  ++initValue;
+  validationQuiz(datasQuestion);
 };
 
 addEventListener('DOMContentLoaded', () => {
-  setLoadBrowser();
-  setProcessingTime();
+  setUI(bankSoal[initValue]);
+  const myInterval = setInterval(setProcessingTime, 1000);
 });
 
 let durationAnimate = 0;
-let logicTimingAnimate = false;
 
 const setProcessingTime = () => {
-  setInterval(() => {
-    const remainingQuestion = maxQuestion - (initValue + 1);
-    timingProcessing -= 1;
-    durationAnimate += 10;
-    amountQuestion.innerHTML = remainingQuestion;
-    contentLoader.style.width = `${durationAnimate}%`;
-    timingQuiz.innerText = timingProcessing;
+  const remainingQuestion = maxQuestion - (initValue + 1);
+  timingProcessing -= 1;
+  timingQuiz.innerHTML = timingProcessing;
+  durationAnimate += 10;
+  contentLoader.style.width = `${durationAnimate}%`;
 
-    if (timingProcessing < 1) {
-      initValue += 1;
-      durationAnimate = 0;
-      timingProcessing = 10;
-      timingQuiz.innerText = timingProcessing;
-      setUI(bankSoal[initValue]);
-    }
-  }, 1000);
+  if (timingProcessing < 1) {
+    initValue++;
+    setUI(bankSoal[initValue]);
+    amountQuestion.innerHTML = remainingQuestion - 1;
+    timingProcessing = 10;
+    durationAnimate = 0;
+    contentLoader.style.width = `${durationAnimate}%`;
+  }
 };
+
+let pointUser = 0;
+let hasAnswer = false;
+
+const validationQuiz = (datasQuestion) => {
+  const { id, pilihan: answers } = datasQuestion;
+
+  const chooseAnswer = document.querySelectorAll('.chooseAnswer');
+  for (const answer of chooseAnswer) {
+    answer.addEventListener('click', (ev) => {
+      const target = ev.target;
+      if (hasAnswer) return;
+
+      hasAnswer = true;
+
+      if (answers[answerResult[id - 1]] == target.innerHTML) {
+        target.classList.add('true');
+        pointUser += 10;
+      } else {
+        target.classList.add('false');
+      }
+    });
+  }
+};
+
+// const nextQuestion = () => {
+//   if (hasAnswer) {
+//     ++initValue;
+//     console.log(hasAnswer);
+//     setUI(bankSoal[initValue]);
+//     hasAnswer = false;
+//   }
+// };
